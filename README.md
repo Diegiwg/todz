@@ -17,76 +17,95 @@ Todz is currently under active development. Stay tuned for updates as we build a
 
 ## Installation 📦
 
-You can install Todz globally using npm:
+You can install Todz globally using npm or yarn:
 
 ```shell
 npm install -g todz
+# or
+yarn global add todz
 ```
 
-## Usage 🧑‍💻
+## Usage 📋
 
-### Create the Database
+Todz offers a variety of commands to help you manage your tasks effectively:
 
-To create the default database, run the following command:
+### Initialization 🌟
+
+Initializes the task database. You can specify a custom path for the database file.
 
 ```shell
-todz init
-# print: Successfully created database.
+todz init [--path <path: string>]
 ```
 
-#### Set the Database Path
+### Adding Tasks 🌟
 
-You can set the database path using the `--path` flag:
+Adds a new task with the given description.
 
 ```shell
-todz init --path <db_path:json file>
-# print: Successfully created database.
+todz add <description: string>
 ```
 
-### Add a New Task
+### Editing Tasks 🌟
 
-To add a new task, use the following command:
+Edits the description of the task with the provided ID.
 
 ```shell
-todz add "Task description goes here"
-# print: Successfully added task, with ID: <task_id:number>.
+todz edit <id: number> <new-description: string>
 ```
 
-### List Tasks
+### Listing Tasks 🌟
 
-To list all tasks, use:
+Lists all tasks. You can filter tasks by their completion status.
 
 ```shell
-todz list
-# print(list): <task_id:number>: Task description goes here.
+todz list [--status <completed|incomplete>]
 ```
 
-### Mark Task as Complete
+### Marking Tasks as Complete 🌟
 
-Mark a task as complete by specifying its ID:
+Marks the task with the given ID as complete.
 
 ```shell
-todz complete <task_id:number>
-# print: Successfully completed task, with ID: <task_id:number>.
+todz complete <id: number>
 ```
 
-### Mark Task as Incomplete
+### Marking Tasks as Incomplete 🌟
 
-Mark a task as incomplete by specifying its ID:
+Marks the task with the given ID as incomplete.
 
 ```shell
-todz incomplete <task_id:number>
-# print: Successfully marked task as incomplete, with ID: <task_id:number>.
+todz incomplete <id: number>
 ```
 
-### Filter Tasks
+### Removing Tasks 🌟
 
-You can filter tasks by status (complete or incomplete) using the `--status` flag:
+Removes the task with the given ID.
 
 ```shell
-todz list --status complete
-# print(list): <task_id:number>: Task description goes here.
+todz remove <id: number>
 ```
+
+### Help 🌟
+
+Displays tool information (incomplete feature).
+
+```shell
+todz help
+```
+
+## Examples 🌟
+
+Here are some examples of how to use Todz:
+
+- To add a new task: `todz add "Complete project report."`
+
+- To list all incomplete tasks: `todz list --status incomplete`
+
+- To mark a task as complete: `todz complete 1`
+
+## Changes Log
+
+For a detailed history of changes to this project, please refer to the [changes.log](changes.log) file in the root directory.
 
 ## License 📜
 

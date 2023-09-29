@@ -1,0 +1,30 @@
+v0.0.0
+    - Init the project.
+
+v0.1.0
+    - Added the 'mycro-db' dependency as the database.
+    - Basic implementation of the CLI.
+        - Commands:
+            - 'todz init' - Initializes the database.
+            - '--path: <path: string>' - Changes the default path to the one provided by the user.
+
+            - 'todz add' - Adds a new task.
+            - '<description: string>' - Task description.
+
+            - 'todz edit' - Edits the description of a task.
+            - '<id: number>' - Task ID.
+            - '<new-description: string>' - New task description.
+
+            - 'todz list' - Lists all tasks.
+            - '--status: <completed|incomplete>' - Filters by status.
+
+            - 'todz complete' - Marks a task as complete.
+            - '<id: number>' - Task ID.
+
+            - 'todz incomplete' - Marks a task as incomplete.
+            - '<id: number>' - Task ID.
+
+            - 'todz remove' - Removes a task.
+            - '<id: number>' - Task ID.
+
+            - 'todz help' - (incomplete) Shows the tool's name.
