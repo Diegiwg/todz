@@ -1,0 +1,27 @@
+{
+    "name": "todz",
+    "version": "0.0.0",
+    "description": "Todz is a CLI tool designed to help you keep your tasks organized.",
+    "author": {
+        "name": "Diegiwg (Diego Queiroz)",
+        "email": "diegiwg@gmail.com",
+        "url": "https://github.com/Diegiwg"
+    },
+    "main": "cli/todz.js",
+    "bin": {
+        "todz": "cli/todz.js"
+    },
+    "license": "MIT",
+    "type": "module",
+    "keywords": [
+        "Todz",
+        "todo",
+        "task",
+        "cli",
+        "command-line",
+        "organizer",
+        "list",
+        "management",
+        "productivity"
+    ]
+}
