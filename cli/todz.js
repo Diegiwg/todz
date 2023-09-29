@@ -130,6 +130,11 @@ function list() {
     let filter = null;
 
     if (args[3] && args[4].length === 0) {
+        if (args[4]?.length === 0) {
+            console.error("Invalid filter.");
+            return;
+        }
+        
         switch (args[4]) {
             case "completed":
                 filter = (task) => task.completed;
