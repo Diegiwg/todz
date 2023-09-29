@@ -30,7 +30,6 @@ function __taskExist__(id) {
 }
 
 function init() {
-    // Verificar se foi passado a flag --path
     let path = "todz.db";
 
     if (args[3]) {
@@ -54,21 +53,13 @@ function init() {
         path = userPath + "\\todz.db";
     }
 
-    // Salvar o caminho para a Database
     fs.writeFileSync(".todz", path);
 
-    // Criar a Database
     const db = new MycroDatabase(path);
-
-    // Criar a Collection
     db.collection("tasks", Task);
-
-    // Salvar a Database
     db.sync();
 
     console.info("Todz successfully initialized!");
-
-    // TODO: Verificar se já existe uma Database, e se sim, avisar e pedir confirmação de sobrescrita.
 }
 
 function add() {
@@ -129,12 +120,12 @@ function edit() {
 function list() {
     let filter = null;
 
-    if (args[3] && args[4].length === 0) {
-        if (args[4]?.length === 0) {
-            console.error("Invalid filter.");
+    if (args[3]) {
+        if (!args[4] || args[4]?.length === 0) {
+            console.error("You must provide a filter.");
             return;
         }
-        
+
         switch (args[4]) {
             case "completed":
                 filter = (task) => task.completed;

@@ -28,3 +28,7 @@ v0.1.0
             - '<id: number>' - Task ID.
 
             - 'todz help' - (incomplete) Shows the tool's name.
+
+v0.1.1
+    - Fixed small issue in @Anonynz's PR #1 (https://github.com/Diegiwg/todz/commit/d767fb0710163aa434df3350b0fd3116bfc8fcb2)
+    - Improved the error message if the '--filter' flag is passed without a filter.
