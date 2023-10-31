@@ -1,6 +1,6 @@
 {
     "name": "todz",
-    "version": "0.1.0",
+    "version": "0.3.0",
     "description": "Todz is a CLI tool designed to help you keep your tasks organized.",
     "author": {
         "name": "Diegiwg (Diego Queiroz)",
@@ -25,6 +25,6 @@
         "productivity"
     ],
     "dependencies": {
-        "mycro-db": "^0.3.2"
+        "mycro-db": "^1.2.5"
     }
 }

@@ -1,5 +1,7 @@
-v0.0.0
-    - Init the project.
+v0.2.0
+    - Typx foi adicionado ao projeto.
+        - O Typx é uma biblioteca leve para auxiliar na segurança dos tipos primitivos do js.
+        - É utilizada no projeto para garantir que os valores passados pelos usuarios sejam do tipo correto.
 
 v0.1.0
     - Added the 'mycro-db' dependency as the database.
@@ -28,3 +30,6 @@ v0.1.0
             - '<id: number>' - Task ID.
 
             - 'todz help' - (incomplete) Shows the tool's name.
+
+v0.0.0
+    - Init the project.
